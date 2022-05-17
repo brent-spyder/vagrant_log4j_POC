@@ -9,6 +9,6 @@ Vagrant.configure("2") do |config|
     config.vm.define "attk" do |attk|
         attk.vm.hostname = "log4j_attacker"
         attk.vm.network "private_network", ip: "65.56.165.10"
-        attk.vm.provision "shell", path: "https://raw.githubusercontent.com/brent-spyder/vagrant_log4j_POC/main/attacker_setup.sh?token=GHSAT0AAAAAABNOMMJ5TMFFITTLGQHZX7AUYUECWOQ"
+        attk.vm.provision "shell", path: "https://raw.githubusercontent.com/brent-spyder/vagrant_log4j_POC/main/attacker_setup.sh"
     end
 end
