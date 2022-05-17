@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
         vic.vm.hostname = "log4j-victim"
         vic.vm.network "forwarded_port", guest:8080, host:8080
         vic.vm.network "private_network", ip: "65.56.165.243"
+        attk.vm.provision "shell", path: "https://raw.githubusercontent.com/brent-spyder/vagrant_log4j_POC/main/victim_setup.sh"
         vic.vm.provider "virtualbox" do |vb|
             vb.memory = "2048"
         end
